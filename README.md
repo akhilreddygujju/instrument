@@ -94,8 +94,7 @@ This project details the instrumentation of a three-phase 10MVA 66kV/13.8kV powe
 
 ## Project Structure
 
-* **documentaiton/**: Contains documentation, Includes calculation sheets for component selections.
-* **diagrams/**: Contains block diagrams for the monitoring circuitry.
+* **documentaiton/**: Contains documentation, Includes calculation sheets for component selections and specification.
 * **images/**: Contains images used in the documentation.
 
 ## Acknowledgments
