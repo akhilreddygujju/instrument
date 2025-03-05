@@ -1,4 +1,4 @@
-# Transformer Instrumentation Project
+# Instrumentation of a Three-Phase Transformer
 
 ## Overview
 
@@ -7,7 +7,7 @@ This project details the instrumentation of a three-phase 10MVA 66kV/13.8kV powe
 ## Key Features
 
 * **Instrumentation of a 10MVA Transformer:** Comprehensive design for monitoring key parameters of a 66kV/13.8kV, Delta-Star, 60Hz power transformer.
-* **Selection and Analysis of Instrument Transformers:** Selection of appropriate ratings for CTs and PTs to scale down voltage and current.
+* **Selection and Analysis of Instrument Transformers:** Selection of appropriate ratings for Current Transformers (CTs) and Potential Transformers (PTs) to scale down voltage and current.
 * **Passive Component Specification:** Calculation of burden resistor values for interfacing with monitoring circuitry.
 * **Analog/Digital Circuitry Design:** Block diagram level description of circuitry for voltage, current, frequency, and power measurement.
 * **Component Identification:** Part number identification from component manufacturers for selected instrument transformer ratings.
@@ -16,38 +16,30 @@ This project details the instrumentation of a three-phase 10MVA 66kV/13.8kV powe
 
 * **Current Transformers (CTs):**
     * Primary Side: 100/5A, Part Number: 2DARL-101 (GE Grid)
-       <p align="center"><img src="images/ctpart.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
-
+        <p align="center"><img src="images/ctpart.jpg" alt="Primary Side Current Transformer (GE 2DARL-101)" style="display: block; margin: 0 auto;"></p>
     * Secondary Side: 500/5A, Part Number: Model 500 (GE)
-      <p align="center"><img src="images/ctsec.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
-
+        <p align="center"><img src="images/ctsec.jpg" alt="Secondary Side Current Transformer (GE Model 500)" style="display: block; margin: 0 auto;"></p>
     * **Operation:** The primary winding is connected in series with the current to be measured. The secondary winding, with more turns, is rated for 1A or 5A. The turns ratio determines the current reduction.
-       <p align="center"><img src="images/ct.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
-
+        <p align="center"><img src="images/ct.jpg" alt="Current Transformer Operation Diagram" style="display: block; margin: 0 auto;"></p>
     * **Construction:** Types include wound, bar, and window. The CT secondary should never be left open.
-      <p align="center"><img src="images/ctabb.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
-
+        <p align="center"><img src="images/ctabb.jpg" alt="Current Transformer Construction" style="display: block; margin: 0 auto;"></p>
 
 * **Potential Transformers (PTs):**
     * Primary Side: 66kV/115V, Part Number: JDCF-72.5W3 (JDCF)
-      <p align="center"><img src="images/ptpri.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
-
+        <p align="center"><img src="images/ptpri.jpg" alt="Primary Side Potential Transformer (JDCF JDCF-72.5W3)" style="display: block; margin: 0 auto;"></p>
     * Secondary Side: 13.8kV/110V, Part Number: PTG5-1-110 (GE)
-      <p align="center"><img src="images/ptsec.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
-
+        <p align="center"><img src="images/ptsec.jpg" alt="Secondary Side Potential Transformer (GE PTG5-1-110)" style="display: block; margin: 0 auto;"></p>
     * **Operation:** PTs step down high voltage, maintaining a fixed proportion.
-      <p align="center"><img src="images/pt.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
-
+        <p align="center"><img src="images/pt.jpg" alt="Potential Transformer Operation Diagram" style="display: block; margin: 0 auto;"></p>
     * **Construction:** Larger cores and conductors than power transformers. Shell-type for low voltage, core-type for high voltage.
-      <p align="center"><img src="images/ptabb.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
+        <p align="center"><img src="images/ptabb.jpg" alt="Potential Transformer Construction Diagram" style="display: block; margin: 0 auto;"></p>
 
 * **Passive Components:**
-    * Burden Resistors: Calculated values for CT and PT outputs.
+    * **Burden Resistors:** Calculated values for CT and PT outputs. Burden resistors convert the secondary current of CTs and PTs to a voltage signal for measurement.
         * CTs: 3-ohm burden resistor for both primary and secondary.
-            <p align="center"><img src="images/burden.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
-
+            <p align="center"><img src="images/burden.jpg" alt="Burden Resistor for Current Transformers" style="display: block; margin: 0 auto;"></p>
         * PTs: Primary PT: 73.52 ohms, Secondary PT: 11.50 ohms.
-          <p align="center"><img src="images/fuse.jpg" alt="Scaled Down Array" style="display: block; margin: 0 auto;"></p>
+            <p align="center"><img src="images/fuse.jpg" alt="Burden Resistor for Potential Transformers" style="display: block; margin: 0 auto;"></p>
 
 * **Monitoring Circuitry:**
     * Analog: Rectifiers, filters, amplifiers.
